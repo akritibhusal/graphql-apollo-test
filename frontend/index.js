@@ -3,15 +3,15 @@
  * Needs a frontend library or postman to run
  */
 
-const request = require('graphql-request');
+const request = require("graphql-request");
 
-const endpoint = 'http://localhost:4000';
+const endpoint = "http://localhost:4000";
 
-const query =  `
+const query = `
   query {
     totalDays
   }
-`
+`;
 
 /**
  * Fetch replaced with graphql-request
@@ -29,6 +29,6 @@ const query =  `
 
 console.log("Sending the query");
 request(endpoint, query)
-  .then(({totalDays}) => `totalDays: ${totalDays}`)
+  .then(({ totalDays }) => `totalDays: ${totalDays}`)
   .then(console.log)
   .catch(console.error);
